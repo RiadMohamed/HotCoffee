@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C248A78253F438100C93254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A77253F438100C93254 /* AppDelegate.swift */; };
 		0C248A7A253F438100C93254 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A79253F438100C93254 /* SceneDelegate.swift */; };
-		0C248A7C253F438100C93254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A7B253F438100C93254 /* ViewController.swift */; };
 		0C248A7F253F438100C93254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C248A7D253F438100C93254 /* Main.storyboard */; };
 		0C248A82253F438100C93254 /* HotCoffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A80253F438100C93254 /* HotCoffee.xcdatamodeld */; };
 		0C248A84253F438800C93254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C248A83253F438800C93254 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		0C248A74253F438100C93254 /* HotCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C248A77253F438100C93254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C248A79253F438100C93254 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C248A7B253F438100C93254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C248A7E253F438100C93254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C248A81253F438100C93254 /* HotCoffee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotCoffee.xcdatamodel; sourceTree = "<group>"; };
 		0C248A83253F438800C93254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +56,9 @@
 		0C248A76253F438100C93254 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				0C248A90253F445700C93254 /* Controller */,
 				0C248A77253F438100C93254 /* AppDelegate.swift */,
 				0C248A79253F438100C93254 /* SceneDelegate.swift */,
-				0C248A7B253F438100C93254 /* ViewController.swift */,
 				0C248A7D253F438100C93254 /* Main.storyboard */,
 				0C248A83253F438800C93254 /* Assets.xcassets */,
 				0C248A85253F438800C93254 /* LaunchScreen.storyboard */,
@@ -68,6 +66,13 @@
 				0C248A80253F438100C93254 /* HotCoffee.xcdatamodeld */,
 			);
 			path = HotCoffee;
+			sourceTree = "<group>";
+		};
+		0C248A90253F445700C93254 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C248A7C253F438100C93254 /* ViewController.swift in Sources */,
 				0C248A82253F438100C93254 /* HotCoffee.xcdatamodeld in Sources */,
 				0C248A78253F438100C93254 /* AppDelegate.swift in Sources */,
 				0C248A7A253F438100C93254 /* SceneDelegate.swift in Sources */,
