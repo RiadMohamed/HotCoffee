@@ -13,6 +13,8 @@
 		0C248A82253F438100C93254 /* HotCoffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A80253F438100C93254 /* HotCoffee.xcdatamodeld */; };
 		0C248A84253F438800C93254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C248A83253F438800C93254 /* Assets.xcassets */; };
 		0C248A87253F438800C93254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C248A85253F438800C93254 /* LaunchScreen.storyboard */; };
+		0C248A93253F45A900C93254 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A92253F45A800C93254 /* OrdersTableViewController.swift */; };
+		0C248A96253F45F400C93254 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248A95253F45F400C93254 /* NewOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0C248A83253F438800C93254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C248A86253F438800C93254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C248A88253F438800C93254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C248A92253F45A800C93254 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		0C248A95253F45F400C93254 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		0C248A90253F445700C93254 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0C248A92253F45A800C93254 /* OrdersTableViewController.swift */,
+				0C248A95253F45F400C93254 /* NewOrderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C248A93253F45A900C93254 /* OrdersTableViewController.swift in Sources */,
 				0C248A82253F438100C93254 /* HotCoffee.xcdatamodeld in Sources */,
 				0C248A78253F438100C93254 /* AppDelegate.swift in Sources */,
 				0C248A7A253F438100C93254 /* SceneDelegate.swift in Sources */,
+				0C248A96253F45F400C93254 /* NewOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
