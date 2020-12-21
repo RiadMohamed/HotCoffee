@@ -41,7 +41,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4E-x2-1te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.82608695652175" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="1330" y="1"/>
         </scene>
         <!--Add New Order-->
         <scene sceneID="RBJ-Su-ini">
@@ -130,12 +130,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1t-BS-VjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62.318840579710148" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="543" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fey-bH-FWv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UgH-hg-gGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JkF-8z-NzD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0zQ-eF-ko0">
@@ -147,8 +146,9 @@
                         <segue destination="HyD-vN-GfE" kind="relationship" relationship="rootViewController" id="FsZ-UD-9nT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgH-hg-gGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979.7101449275365" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="2113" y="1"/>
         </scene>
     </scenes>
     <resources>
