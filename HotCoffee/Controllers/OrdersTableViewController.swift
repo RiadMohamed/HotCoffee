@@ -17,6 +17,26 @@ class OrdersTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        populateOrders()
+        
+    }
+    
+    private func populateOrders() {
+        guard let coffeeOrdersURL = URL(string: "https://guarded-retreat-82533.herokuapp.com") else {
+            fatalError("Could not create the coffeeOrders server url.")
+        }
+        
+        let coffeeOrdersResource = Resource<[Order]>(url: coffeeOrdersURL)
+        
+        Webservice().load(resource: coffeeOrdersResource) { (result) in
+            switch result {
+                case .success(let orders):
+                    print(orders)
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
 
     // MARK: - Table view data source

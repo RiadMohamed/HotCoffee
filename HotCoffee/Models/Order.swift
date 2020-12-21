@@ -12,7 +12,7 @@ enum CoffeeType: String, Codable {
     case caramel
     case mocha
 }
-
+    
 enum CoffeeSize: String, Codable {
     case small
     case medium
