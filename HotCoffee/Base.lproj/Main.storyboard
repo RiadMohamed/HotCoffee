@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newOrderTableViewCell" textLabel="uK6-Mk-nqs" detailTextLabel="pvS-kP-NYF" style="IBUITableViewCellStyleValue1" id="Idg-23-Tbf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newOrderTableViewCell" textLabel="uK6-Mk-nqs" style="IBUITableViewCellStyleDefault" id="Idg-23-Tbf">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Idg-23-Tbf" id="9H1-cD-lWa">
@@ -79,14 +79,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uK6-Mk-nqs">
-                                                    <rect key="frame" x="20" y="12" width="33" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pvS-kP-NYF">
-                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -101,14 +94,6 @@
                                     <outlet property="delegate" destination="HyD-vN-GfE" id="aj6-be-ANB"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="btN-le-1sA">
-                                <rect key="frame" x="104" y="485" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uir-cb-nZI">
                                 <rect key="frame" x="107" y="577" width="200" height="34"/>
                                 <constraints>
@@ -129,16 +114,14 @@
                         <viewLayoutGuide key="safeArea" id="jYQ-08-YqF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="btN-le-1sA" firstAttribute="top" secondItem="CiG-d2-gXH" secondAttribute="bottom" constant="8" symbolic="YES" id="1S4-vw-TAI"/>
                             <constraint firstItem="CiG-d2-gXH" firstAttribute="width" secondItem="oJs-ah-AeX" secondAttribute="width" id="6I0-af-PGE"/>
                             <constraint firstItem="CiG-d2-gXH" firstAttribute="height" secondItem="oJs-ah-AeX" secondAttribute="height" multiplier="0.5" id="84n-nK-i7K"/>
                             <constraint firstItem="MsQ-ej-TnT" firstAttribute="centerX" secondItem="oJs-ah-AeX" secondAttribute="centerX" id="IRy-ot-ap3"/>
-                            <constraint firstItem="btN-le-1sA" firstAttribute="centerX" secondItem="oJs-ah-AeX" secondAttribute="centerX" id="OwD-ai-73W"/>
                             <constraint firstItem="uir-cb-nZI" firstAttribute="centerX" secondItem="oJs-ah-AeX" secondAttribute="centerX" id="XoF-k8-s3M"/>
                             <constraint firstItem="CiG-d2-gXH" firstAttribute="top" secondItem="jYQ-08-YqF" secondAttribute="top" id="YKm-1T-7MA"/>
                             <constraint firstItem="MsQ-ej-TnT" firstAttribute="top" secondItem="uir-cb-nZI" secondAttribute="bottom" constant="8" symbolic="YES" id="ebG-aY-y2j"/>
                             <constraint firstItem="CiG-d2-gXH" firstAttribute="leading" secondItem="jYQ-08-YqF" secondAttribute="leading" id="hLC-9e-4O3"/>
-                            <constraint firstItem="uir-cb-nZI" firstAttribute="top" secondItem="btN-le-1sA" secondAttribute="bottom" constant="61" id="yuK-eY-NFT"/>
+                            <constraint firstItem="jYQ-08-YqF" firstAttribute="bottom" secondItem="MsQ-ej-TnT" secondAttribute="bottom" constant="155" id="vuE-nj-jga"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="vj4-YL-Yeu">

@@ -12,6 +12,9 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     let newOrderVM = AddNewOrderViewModel()
     
+    private var coffeeSizesSegmentedControl: UISegmentedControl!
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.newOrderVM.types.count
@@ -26,11 +29,19 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
         // Do any additional setup after loading the view.
     }
     
-    
+    private func setupUI() {
+        self.coffeeSizesSegmentedControl = UISegmentedControl(items: newOrderVM.sizes)
+        self.coffeeSizesSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.coffeeSizesSegmentedControl)
+        
+        self.coffeeSizesSegmentedControl.topAnchor.constraint(equalTo: self.tableView.bottomAnchor, constant: 20).isActive = true
+        
+        self.coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
 
     /*
     // MARK: - Navigation
