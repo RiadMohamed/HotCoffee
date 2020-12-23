@@ -19,6 +19,7 @@
 		0CD3A621259124E3001A0B22 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3A620259124E3001A0B22 /* Order.swift */; };
 		0CD3A625259134CF001A0B22 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3A624259134CF001A0B22 /* OrderViewModel.swift */; };
 		0CD3A6282593E8E3001A0B22 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3A6272593E8E2001A0B22 /* K.swift */; };
+		0CD3A62B2593FF44001A0B22 /* AddNewOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3A62A2593FF43001A0B22 /* AddNewOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0CD3A620259124E3001A0B22 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0CD3A624259134CF001A0B22 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		0CD3A6272593E8E2001A0B22 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		0CD3A62A2593FF43001A0B22 /* AddNewOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD3A624259134CF001A0B22 /* OrderViewModel.swift */,
+				0CD3A62A2593FF43001A0B22 /* AddNewOrderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				0C248A82253F438100C93254 /* HotCoffee.xcdatamodeld in Sources */,
 				0C248A78253F438100C93254 /* AppDelegate.swift in Sources */,
 				0C248A7A253F438100C93254 /* SceneDelegate.swift in Sources */,
+				0CD3A62B2593FF44001A0B22 /* AddNewOrderViewModel.swift in Sources */,
 				0C248A96253F45F400C93254 /* NewOrderViewController.swift in Sources */,
 				0CD3A621259124E3001A0B22 /* Order.swift in Sources */,
 				0CD3A625259134CF001A0B22 /* OrderViewModel.swift in Sources */,
