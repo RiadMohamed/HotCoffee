@@ -19,20 +19,23 @@ class OrdersTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         populateOrders()
-        
     }
     
+    var orderListVM = OrderListViewModel()
+    
+    
     private func populateOrders() {
-        guard let coffeeOrdersURL = URL(string: "https://guarded-retreat-82533.herokuapp.com") else {
+        guard let coffeeOrdersURL = URL(string: "https://guarded-retreat-82533.herokuapp.com/orders") else {
             fatalError("Could not create the coffeeOrders server url.")
         }
         
         let coffeeOrdersResource = Resource<[Order]>(url: coffeeOrdersURL)
         
-        Webservice().load(resource: coffeeOrdersResource) { (result) in
+        Webservice().load(resource: coffeeOrdersResource) { [weak self] (result) in
             switch result {
                 case .success(let orders):
-                    print(orders)
+                    self?.orderListVM.ordersViewModel = orders.map(OrderViewModel.init)
+                    self?.tableView.reloadData()
                 case .failure(let error):
                     print(error)
             }
@@ -43,23 +46,27 @@ class OrdersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.orderListVM.ordersViewModel.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let currentVM = self.orderListVM.orderViewModel(at: indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.orderTableViewCell, for: indexPath)
+        
+        cell.textLabel?.text = currentVM.type
+        cell.detailTextLabel?.text = currentVM.size
+    
         return cell
+        
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

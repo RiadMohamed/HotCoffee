@@ -8,15 +8,15 @@
 import Foundation
 
 enum CoffeeType: String, Codable {
-    case vanilla
-    case caramel
-    case mocha
+    case Vanilla
+    case Caramel
+    case Mocha
 }
     
 enum CoffeeSize: String, Codable {
-    case small
-    case medium
-    case large
+    case Small
+    case Medium
+    case Large
 }
 
 struct Order: Codable {
