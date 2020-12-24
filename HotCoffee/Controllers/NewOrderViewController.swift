@@ -10,7 +10,9 @@ import UIKit
 class NewOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    let newOrderVM = AddNewOrderViewModel()
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    var newOrderVM = AddNewOrderViewModel()
     
     private var coffeeSizesSegmentedControl: UISegmentedControl!
     
@@ -24,6 +26,14 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: K.newOrderTableViewCell, for: indexPath)
         cell.textLabel?.text = self.newOrderVM.types[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
     
 
@@ -41,6 +51,24 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
         self.coffeeSizesSegmentedControl.topAnchor.constraint(equalTo: self.tableView.bottomAnchor, constant: 20).isActive = true
         
         self.coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+    }
+    
+    @IBAction func saveButtonTapped() {
+        
+        guard let selectedCoffeeType = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text else {
+            fatalError("Error getting the selected coffee type")
+//            return
+        }
+        
+        let selectedCoffeeSize = self.coffeeSizesSegmentedControl.titleForSegment(at: self.coffeeSizesSegmentedControl.selectedSegmentIndex)
+        
+        let name = self.nameTextField.text
+        let email = self.emailTextField.text
+        
+        self.newOrderVM.name = name
+        self.newOrderVM.email = email
+        self.newOrderVM.type = selectedCoffeeType
+        self.newOrderVM.size = selectedCoffeeSize
     }
 
     /*
