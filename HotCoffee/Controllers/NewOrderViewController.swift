@@ -12,7 +12,7 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    var newOrderVM = AddNewOrderViewModel()
+    var newOrderVM = NewOrderViewModel()
     
     private var coffeeSizesSegmentedControl: UISegmentedControl!
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AddNewOrderViewModel {
+struct NewOrderViewModel {
     var name: String?
     var email: String?
     var type: String?
