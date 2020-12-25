@@ -7,7 +7,20 @@
 
 import UIKit
 
-class OrdersTableViewController: UITableViewController {
+class OrdersTableViewController: UITableViewController, NewOrderDelegate {
+    
+    func newOrderSaved(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        
+        let newOrderViewModel = OrderViewModel(order: order)
+        self.orderListVM.ordersViewModel.append(newOrderViewModel)
+        self.tableView.reloadData()
+    }
+    
+    func closeOrder(controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +77,16 @@ class OrdersTableViewController: UITableViewController {
         cell.detailTextLabel?.text = currentVM.size
     
         return cell
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController, let newOrderVC = navC.viewControllers.first as? NewOrderViewController else {
+            fatalError("Cant get the new order controller")
+        }
+        
+        newOrderVC.delegate = self
+        
         
     }
     

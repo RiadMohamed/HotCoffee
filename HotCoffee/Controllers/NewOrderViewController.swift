@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol NewOrderDelegate {
+    func newOrderSaved(order: Order, controller: UIViewController)
+    func closeOrder(controller: UIViewController)
+}
+
 class NewOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var delegate: NewOrderDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -53,6 +60,13 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
         self.coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
+    @IBAction func closeButtonTapped() {
+        if let safeDelegate = self.delegate {
+            safeDelegate.closeOrder(controller: self)
+        }
+    }
+    
+    
     @IBAction func saveButtonTapped() {
         
         guard let selectedCoffeeType = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text else {
@@ -69,6 +83,20 @@ class NewOrderViewController: UIViewController, UITableViewDelegate, UITableView
         self.newOrderVM.email = email
         self.newOrderVM.type = selectedCoffeeType
         self.newOrderVM.size = selectedCoffeeSize
+        
+        Webservice().load(resource: Order.create(VM: newOrderVM)) { (result) in
+            switch result {
+            case .success(let order):
+                if let safeOrder = order, let safeDelegate = self.delegate {
+                    DispatchQueue.main.async {
+                        safeDelegate.newOrderSaved(order: safeOrder, controller: self)
+                    }
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
 
     /*
