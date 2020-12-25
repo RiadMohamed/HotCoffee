@@ -13,9 +13,17 @@ enum NetworkError: Error {
     case networkingError
 }
 
-struct Resource<T: Codable> {
-    let url: URL
+enum HTTP: String {
+    case get = "GET"
+    case post = "POST"
 }
+
+struct Resource<T: Codable> {
+    var url: URL
+    var http: HTTP = .get
+    var body: Data? = nil
+}
+
 
 class Webservice {
     func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void ) {

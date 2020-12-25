@@ -27,7 +27,26 @@ struct Order: Codable {
 }
 
 extension Order {
-    init?(newOrderVM: NewOrderViewModel) {
+    static func create(VM: NewOrderViewModel) -> Resource<Order?> {
+        let currentOrder = Order(VM)
+        
+        guard let url = URL(string: K.ordersURL) else {
+            fatalError("Cant create url.")
+        }
+        
+        guard let data = try? JSONEncoder().encode(currentOrder) else {
+            fatalError("Cant encode the new order.")
+        }
+        
+        var orderResource = Resource<Order?>(url: url)
+        orderResource.body = data
+        orderResource.http = .post
+        return orderResource
+    }
+}
+
+extension Order {
+    init?(_ newOrderVM: NewOrderViewModel) {
         guard let name = newOrderVM.name,
               let email = newOrderVM.email,
               let type = CoffeeType(rawValue: newOrderVM.type!.capitalized),

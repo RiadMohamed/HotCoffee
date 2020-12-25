@@ -25,7 +25,7 @@ class OrdersTableViewController: UITableViewController {
     
     
     private func populateOrders() {
-        guard let coffeeOrdersURL = URL(string: "https://guarded-retreat-82533.herokuapp.com/orders") else {
+        guard let coffeeOrdersURL = URL(string: K.ordersURL) else {
             fatalError("Could not create the coffeeOrders server url.")
         }
         
